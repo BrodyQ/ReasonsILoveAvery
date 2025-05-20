@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>365 Reasons I Love You</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #ffe6e6;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      color: #cc3366;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #cc3366;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .reason {
+      margin-top: 30px;
+      font-size: 24px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>365 Reasons I Love You</h1>
+  <button onclick="showReason()">Show Me a Reason</button>
+  <div class="reason" id="reasonText"></div>
+
+  <script>
+    const reasons = [
+      "You always make me smile.",
+      "You support me in everything I do.",
+      "You make the best pancakes.",
+      "Dat ass"
+      // ... up to 365 total reasons
+    ];
+
+    function showReason() {
+      const index = Math.floor(Math.random() * reasons.length);
+      const reason = reasons[index];
+      document.getElementById('reasonText').textContent = `${index + 1}. ${reason}`;
+    }
+  </script>
+</body>
+</html>
